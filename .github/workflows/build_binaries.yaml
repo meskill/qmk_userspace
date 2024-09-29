@@ -19,7 +19,7 @@ jobs:
         id: set_tag
         run: |
           tag=$(cat qmk_tag | tr -d "[:space:]")
-          echo "::set-output name=tag::$(tag)"
+          echo "tag=$tag" >> $GITHUB_OUTPUT
 
   build:
     name: 'QMK Userspace Build'
