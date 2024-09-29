@@ -24,7 +24,7 @@ void layer_state_set_rgb(layer_state_t state);
 
 void housekeeping_task_rgb(void);
 
-#define SPLIT_RGBLED_NUM (RGBLED_NUM / 2)
+#define SPLIT_RGBLED_NUM (RGBLIGHT_LED_COUNT / 2)
 #define SPLIT_LED_LEFT(start, count, color) {start, count, color}
 #define SPLIT_LED_RIGHT(start, count, color) {SPLIT_RGBLED_NUM + (start % 2 == 0 ? SPLIT_RGBLED_NUM - 2 : SPLIT_RGBLED_NUM) - start - count + 1, count, color}
 

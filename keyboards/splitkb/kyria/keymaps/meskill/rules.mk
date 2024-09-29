@@ -4,7 +4,6 @@ SRC += features/lang_switch.c
 SRC += macro.c
 SRC += mod_tap.c
 SRC += mod_hold.c
-SRC += tap_dance.c
 SRC += rgb.c
 
 CONVERT_TO=liatris
@@ -19,6 +18,5 @@ KEY_OVERRIDE_ENABLE = yes
 COMBO_ENABLE = yes
 SWAP_HANDS_ENABLE = yes
 CAPS_WORD_ENABLE = yes
-TAP_DANCE_ENABLE = yes
 
 CONSOLE_ENABLE = yes

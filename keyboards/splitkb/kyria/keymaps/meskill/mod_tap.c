@@ -16,12 +16,11 @@
 
 #include "mod_tap.h"
 #include "keymap_russian.h"
-#include "tap_dance.h"
 
 bool process_mod_tap(uint16_t keycode, keyrecord_t *record) {
     bool down = record->event.pressed;
     bool tap = record->tap.count > 0;
-    int mods = get_mods() | get_oneshot_mods() | get_dance_mods();
+    int mods = get_mods() | get_oneshot_mods();
 
     if (!tap) return true;
 

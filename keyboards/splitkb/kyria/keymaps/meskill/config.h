@@ -36,8 +36,8 @@
     #define RGB_DISABLE_WHEN_USB_SUSPENDED
     #define RGBLIGHT_TIMEOUT 600000
     // only underglow leds
-    #undef RGBLED_NUM
-    #define RGBLED_NUM 12
+    #undef RGBLIGHT_LED_COUNT
+    #define RGBLIGHT_LED_COUNT 12
     #undef RGBLED_SPLIT
     #define RGBLED_SPLIT {6, 6}
     // mapped horizontally instead of default c-formed placement

@@ -36,7 +36,7 @@ const key_override_t backslash_ru = ko_make_with_layers(MOD_MASK_SHIFT, S_SLH, S
 const key_override_t quote = ko_make_with_layers(MOD_MASK_SHIFT, LT(FN, S_DQOT), S_QOT, LANG);
 
 // This globally defines all key overrides to be used
-const key_override_t **key_overrides = (const key_override_t *[]){
+const key_override_t *key_overrides[] = {
     &gamebar_record,
     &colon_en,
     &colon_ru,
@@ -46,6 +46,5 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &backslash_en,
     &backslash_ru,
     &quote,
-    NULL // Null terminate the array of overrides!
 };
 

@@ -16,7 +16,6 @@
 #include QMK_KEYBOARD_H
 #include "keymap_russian.h"
 #include "layout.h"
-#include "tap_dance.h"
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
