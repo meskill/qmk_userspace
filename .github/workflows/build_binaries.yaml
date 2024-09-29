@@ -6,12 +6,28 @@ permissions:
   contents: write
 
 jobs:
+  read-tag:
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.set_tag.outputs.tag }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Read Tag from File
+        id: set_tag
+        run: |
+          tag=$(cat qmk_tag | tr -d "[:space:]")
+          echo "::set-output name=tag::$(tag)"
+
   build:
     name: 'QMK Userspace Build'
     uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
+    needs: read-tag
     with:
       qmk_repo: qmk/qmk_firmware
-      qmk_ref: master
+      qmk_ref: ${{ needs.read-tag.outputs.tag }}
 
   publish:
     name: 'QMK Userspace Publish'
