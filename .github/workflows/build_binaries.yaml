@@ -31,6 +31,8 @@ jobs:
 
   publish:
     name: 'QMK Userspace Publish'
-    uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
     if: always() && !cancelled()
     needs: build
+    uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
+    with:
+      release_name: ${{ github.ref_name }}
