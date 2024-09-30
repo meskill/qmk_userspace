@@ -34,9 +34,6 @@
 
           # Add any shell logic you want executed any time the environment is activated
           shellHook = ''
-            echo "Start qmk setup"
-            tag=$(cat qmk_tag | tr -d "[:space:]")
-            qmk setup -y --home "$(pwd)/qmk_firmware" --branch "$tag"
             qmk config user.overlay_dir="$(pwd)"
           '';
         };

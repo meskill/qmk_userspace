@@ -16,6 +16,5 @@ compile_commands.json
 .cache/
 
 # env
-.envrc
 .direnv
 qmk_firmware
