@@ -21,7 +21,7 @@
 bool process_macro(uint16_t keycode, keyrecord_t *record) {
     bool down = record->event.pressed;
     int mods = get_mods();
-    bool is_shift = mods & MOD_MASK_SHIFT;
+    bool with_modifier = mods & MOD_MASK_SA;
 
     if (!down) return true;
 
@@ -36,14 +36,14 @@ bool process_macro(uint16_t keycode, keyrecord_t *record) {
         case SEND_THE:
             if (is_caps_word_on()) {
                 SEND_STRING("THE");
-            } else if (is_shift) {
+            } else if (with_modifier) {
                 SEND_STRING("The");
             } else {
                 SEND_STRING("the");
             }
             return false;
         case KC_GRV:
-            if (is_shift) {
+            if (with_modifier) {
                 del_mods(mods);
                 SEND_STRING("```");
                 add_mods(mods);
@@ -51,7 +51,7 @@ bool process_macro(uint16_t keycode, keyrecord_t *record) {
             }
             return true;
         case SEND_ARR:
-            if (is_shift) {
+            if (with_modifier) {
                 del_mods(mods);
                 SEND_STRING("=>");
                 add_mods(mods);

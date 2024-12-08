@@ -129,6 +129,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
         case LGUI_T(S_RCBR):
         case LT(NAV, KC_RPRN):
         case LT(SYM, S_RBRC):
+        case ALGR_T(S_LCBR):
             // Immediately select the hold action when another key is pressed.
             return true;
         default:
