@@ -78,8 +78,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 		[STP] = LAYOUT(
       QK_BOOT, QK_CLEAR_EEPROM, _______, _______, _______, _______,                                              _______, _______, _______, _______, _______, _______,
-      _______, _______, _______, _______, _______, _______,                                              RGB_TOG, RGB_SAI, RGB_HUI, RGB_VAI, RGB_MOD, _______,
-      DB_TOGG, _______, _______, _______, _______, _______, RESET_STATE, _______,           _______, RESET_STATE, _______, RGB_SAD, RGB_HUD, RGB_VAD, RGB_RMOD, _______,
+      _______, _______, _______, _______, _______, _______,                                              UG_TOGG, UG_SATU, UG_HUEU, UG_VALU, UG_NEXT, _______,
+      DB_TOGG, _______, _______, _______, _______, _______, RESET_STATE, _______,           _______, RESET_STATE, _______, UG_SATD, UG_HUED, UG_VALD, UG_PREV, _______,
                                 _______, _______, _______, _______, TG(GAME),             TG(GAME), _______, _______, TG(NAV), TG(SYM)
     )
 
