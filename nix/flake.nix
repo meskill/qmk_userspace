@@ -2,10 +2,17 @@
   description = "Qmk cli flake";
 
   # Flake inputs
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/22666a6cbfe50d7e1cef9615544b4477d2e833a7";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/22666a6cbfe50d7e1cef9615544b4477d2e833a7";
+
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
+    };
+  };
 
   # Flake outputs
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, flake-compat }:
     let
       # The systems supported for this flake
       supportedSystems = [
