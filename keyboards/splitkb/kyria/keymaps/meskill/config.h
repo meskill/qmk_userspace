@@ -41,7 +41,7 @@
     #undef RGBLED_SPLIT
     #define RGBLED_SPLIT {6, 6}
     // mapped horizontally instead of default c-formed placement
-    #define RGBLIGHT_LED_MAP {4, 2, 0, 1, 3, 5, 6+0, 6+2, 6+4, 6+5, 6+3, 6+1}
+    #define RGBLIGHT_LED_MAP {2, 3, 1, 4, 0, 5, 6+5, 6+0, 6+4, 6+1, 6+3, 6+2}
 
     // control on-controller led. Uncomment only in case if you want to control
     // only that leds as it will prevent from controlling on-keyboard leds

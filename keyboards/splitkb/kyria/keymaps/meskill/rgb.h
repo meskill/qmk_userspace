@@ -24,11 +24,9 @@ void layer_state_set_rgb(layer_state_t state);
 
 void housekeeping_task_rgb(void);
 
-#define SPLIT_RGBLED_NUM (RGBLIGHT_LED_COUNT / 2)
-#define SPLIT_LED_LEFT(start, count, color) {start, count, color}
-#define SPLIT_LED_RIGHT(start, count, color) {SPLIT_RGBLED_NUM + (start % 2 == 0 ? SPLIT_RGBLED_NUM - 2 : SPLIT_RGBLED_NUM) - start - count + 1, count, color}
+#define SPLIT_LED_LEFT(start, color) {start, 1, color}
+#define SPLIT_LED_RIGHT(start, color) {RGBLIGHT_LED_COUNT - 1 - start, 1, color}
 
-#define SPLIT_LED_MIRROR(start, count, color) \
-  {start, count, color}, \
-  {SPLIT_RGBLED_NUM + (start % 2 == 0 ? SPLIT_RGBLED_NUM - 2 : SPLIT_RGBLED_NUM) - start - count + 1, count, color}
-
+#define SPLIT_LED_MIRROR(start, color) \
+  {start, 1, color}, \
+  {RGBLIGHT_LED_COUNT - 1 - start, 1, color}

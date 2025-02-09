@@ -3,7 +3,7 @@
 
   # Flake inputs
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/22666a6cbfe50d7e1cef9615544b4477d2e833a7";
+    nixpkgs.url = "github:NixOS/nixpkgs/fa50093d3bb32dcfaaa689a3e89cdf4702c95365";
 
     flake-compat = {
       url = "github:edolstra/flake-compat";
