@@ -24,6 +24,7 @@
 #include "layout.c"
 #include "override.c"
 #include "rgb.h"
+#include "tap_dance.c"
 
 // Disable power led on controller
 void keyboard_pre_init_user(void) {

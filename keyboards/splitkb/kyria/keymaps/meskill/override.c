@@ -16,8 +16,6 @@
 
 #include "keymap_russian.h"
 
-const key_override_t gamebar_record = ko_make_basic(MOD_MASK_GUI, LAG(KC_PSCR), LAG(KC_R));
-
 #define EN_ONL (1<<EN)
 
 const key_override_t colon_en = ko_make_with_layers(MOD_MASK_SHIFT, KC_DOT, KC_COLN, EN_ONL);
@@ -37,7 +35,6 @@ const key_override_t quote = ko_make_with_layers(MOD_MASK_SHIFT, LT(FN, S_DQOT),
 
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
-    &gamebar_record,
     &colon_en,
     &colon_ru,
     &semicolon_en,
