@@ -2,6 +2,7 @@
 
 #include QMK_KEYBOARD_H
 
+#define KC_RECORD_KEY KC_F15
 
 typedef struct {
     uint16_t tap1;
@@ -13,6 +14,7 @@ typedef struct {
 void tap_dance_tap_hold_finished(tap_dance_state_t *state, void *user_data);
 
 enum {
+    // Tap Dance Recording
     TD_RCRD,
 };
 
