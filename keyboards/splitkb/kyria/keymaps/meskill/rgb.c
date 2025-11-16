@@ -24,7 +24,7 @@ enum {
     // and I need to overwrite ru layer with en so it should be higher in rgb sense
     RGB_RU = EN,
     RGB_EN = RU,
-    RGB_DBG = MDA + 1,
+    RGB_DBG = STP + 1,
     RGB_CWRD,
     RGB_RESET
 };
@@ -145,7 +145,7 @@ void layer_state_set_rgb(layer_state_t state) {
 }
 
 static uint32_t rgb_timer;
-bool is_rgb_timeout = false;
+static bool is_rgb_timeout = false;
 
 void refresh_rgb(void) {
     rgb_timer = timer_read32();

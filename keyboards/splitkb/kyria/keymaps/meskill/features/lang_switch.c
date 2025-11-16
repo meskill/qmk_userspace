@@ -17,17 +17,10 @@
 #include "lang_switch.h"
 #include "debug.h"
 
-static uint32_t timer = 0;
-
-void reset_lang_switch_timer(void) {
-    timer = timer_read32() + LANG_SWITCH_TIMEOUT;
-}
-
 bool process_lang_switch(uint16_t keycode, keyrecord_t *record) {
     bool down = record->event.pressed;
     int mods = get_mods() | get_oneshot_mods();
 
-    reset_lang_switch_timer();
     uint16_t lang_layer_keycode = keymap_key_to_keycode(LANG_SWITCH_LAYER, record->event.key);
 
     if (keycode != lang_layer_keycode || !mods || mods & MOD_MASK_SHIFT) {
@@ -47,13 +40,4 @@ bool process_lang_switch(uint16_t keycode, keyrecord_t *record) {
     }
 
     return true;
-}
-
-void lang_switch_task(void) {
-    if (timer_expired32(timer_read32(), timer)) {
-        dprint("lang_switch_timer expired\n");
-        layer_move(0);
-        SWTC_EN();
-        reset_lang_switch_timer();
-    }
 }

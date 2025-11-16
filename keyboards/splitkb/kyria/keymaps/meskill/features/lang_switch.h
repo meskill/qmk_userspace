@@ -19,10 +19,8 @@
 #include QMK_KEYBOARD_H
 #include "layout.h"
 
-#ifndef LANG_SWITCH_TIMEOUT
-#    define LANG_SWITCH_TIMEOUT 600000 // default is 10 minutes
-#endif
-
+// Processes the modifier keys for hotkeys when using the additional language layer
+// by converting the keycode to the keycode of the base layer.
+// That fixes the issues for some programs that separate hotkeys by language and not just by keycode.
+//
 bool process_lang_switch(uint16_t keycode, keyrecord_t *record);
-
-void lang_switch_task(void);

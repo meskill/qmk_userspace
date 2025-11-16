@@ -33,7 +33,6 @@
 #ifdef RGBLIGHT_ENABLE
     // hardware settings
     #define RGBLIGHT_SLEEP
-    #define RGB_DISABLE_WHEN_USB_SUSPENDED
     #define RGBLIGHT_TIMEOUT 600000
     // only underglow leds
     #undef RGBLIGHT_LED_COUNT
