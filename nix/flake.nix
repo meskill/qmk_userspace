@@ -3,7 +3,7 @@
 
   # Flake inputs
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/fa50093d3bb32dcfaaa689a3e89cdf4702c95365";
+    nixpkgs.url = "github:NixOS/nixpkgs";
 
     flake-compat = {
       url = "github:edolstra/flake-compat";
@@ -18,7 +18,6 @@
       supportedSystems = [
         "x86_64-linux" # 64-bit Intel/AMD Linux
         "aarch64-linux" # 64-bit ARM Linux
-        "x86_64-darwin" # 64-bit Intel macOS
         "aarch64-darwin" # 64-bit ARM macOS
       ];
 
@@ -34,6 +33,7 @@
           # Add any you need here
           packages = with pkgs; [
             qmk
+            dos2unix
           ];
 
           # Set any environment variables for your dev shell

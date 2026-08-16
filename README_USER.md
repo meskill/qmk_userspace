@@ -5,7 +5,7 @@
 1. Clone the repo
 2. Start the nix shell. It should happen automatically with direnv or run `nix develop` explicitly.
 3. Run `setup.nu` to initialize the environment
-4. Now run `qmk userspace-compile` to compile the firmware
+4. Now run `qmk userspace-compile -p` to compile the firmware
 
 ## Update qmk_firmware version
 
