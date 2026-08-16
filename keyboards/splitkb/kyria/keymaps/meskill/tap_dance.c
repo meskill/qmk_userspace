@@ -1,7 +1,7 @@
 #include "tap_dance.h"
 
 tap_dance_action_t tap_dance_actions[] = {
-    [TD_RCRD] = ACTION_TAP_DANCE_TAP_HOLD(LALT(KC_RECORD_KEY), LCA(KC_RECORD_KEY), MEH(KC_RECORD_KEY)),
+    [TD_RCRD] = ACTION_TAP_DANCE_TAP_HOLD(KC_F15, KC_F16, KC_F17),
 };
 
 void tap_dance_tap_hold_finished(tap_dance_state_t *state, void *user_data) {
